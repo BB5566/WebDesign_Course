@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>form (ᗒᗨᗕ)/</h3>
+    <hr>
+    <form action="">
+        <!-- input:text -->
+        <h3>text 文字方塊</h3>
+        <p>
+            <!-- for id -->
+            <!-- id 身分證唯一值 選擇  -->
+            <!-- name 後端接收的column key -->
+            <!-- value 後端接收的column value-->
+            <!-- 未來 id name 資料庫(db)column 都可以取一樣 比較方便 -->
+            <!-- name = kai -->
+            <label for="name">name:</label>
+            <input type="text" name="name" id="name">
+
+        </p>
+        <h3> radio 單選 </h3>
+        <p>
+            <!-- name 同一樣 -->
+            <!-- gender = boy -->
+            <input type="radio" name="gender" id="boy">
+            <label for="html">男生</label>
+            <input type="radio" name="gender" id="girl">
+            <label for="css">女生</label>
+            <input type="radio" name="gender" id="other">
+            <label for="js">其他</label>
+        </p>
+        <h3>checkbox 多選</h3>
+        <p>
+            <!-- name 名字取一樣 -->
+            <!--加上[] -->
+            <!-- [] array 陣列 -->
+            <!-- love = [html , css ,js] -->
+            <input type="checkbox" name="love[]" id="html" value="html">
+            <label for="html">html</label>
+            <input type="checkbox" name="love[]" id="css" value="css">
+            <label for="html">css</label>
+            <input type="checkbox" name="love[]" id="js" value="js">
+            <label for="html">hjsml</label>
+        </p>
+        <h3>date </h3>
+        <p>
+            <label for="birthday">生日</label>
+            <input type="date" name="birthday" id="birthday">
+        </p>
+
+        <br>
+        <hr><br>
+        <h3>select</h3>
+        <!-- select 之前 先寫input text  -->
+        <!-- car = 'audi' -->
+        <p>
+            <label for="car">Car</label>
+            <input type="text" name="car" id="car" value="audi">
+        </p>
+        <!-- car = 'audi/bmw/toyota' -->
+        <p>
+            <label for="car2">Car2</label>
+            <select name="car2" id="car2">
+                <option value="bmw">bmw</option>
+                <option value="toyota">toyota</option>
+                <option value="audi">audi</option>
+            </select>
+        </p>
+
+        <h3>textarea</h3>
+        <!--  -->
+        <textarea name="msg" id="" cols="30" rows="10"></textarea>
+
+        <p>
+            <input type="submit" value="Submit">
+        </p>
+        <p>
+            <input type="reset" value="Reset">
+        </p>
+        <!-- vip = VVVVIP -->
+        <!-- ... -->
+        <p>
+            <input type="hidden" name="vip" value="VVVVIP" value="hidden data">
+        </p>
+
+
+    </form>
+
+    
+
+
+</body>
+
+</html>

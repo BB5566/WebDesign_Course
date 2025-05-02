@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Segoe UI", sans-serif;
+            background-image: url("https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExeG0zYTFndnNueTk5Y2lxenBzZWVjeXltcGJwMmlka2VqM2J5OHp6eCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/8R3zYwFk7ppWhbUjVH/giphy.gif");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            color: rgb(0, 0, 0);
+            background-color: #000;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 64pt;
+            color: #ffffff;
+            margin-top: 40px;
+        }
+
+        table {
+            border-collapse: collapse;
+            margin: 40px auto;
+            width: 90%;
+            max-width: 1000px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            background-color: rgba(0, 0, 0, 0.6);
+            /* 半透明黑背景 */
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        td {
+            border: 2px solid #fff;
+            width: 50%;
+            padding: 20px;
+            vertical-align: top;
+            text-align: left;
+        }
+
+        .box {
+            color: white;
+            line-height: 1.8;
+        }
+
+        h2 {
+            color: #ffffff;
+            margin-top: 0;
+        }
+
+        #box11,
+        #h21 {
+            background-color: rgba(0, 128, 0, 0.5);
+        }
+
+        #box12,
+        #h22 {
+            background-color: rgba(255, 165, 0, 0.5)
+        }
+
+        #box21,
+        #h23 {
+            background-color: rgba(0, 0, 139, 0.5)
+        }
+
+        #box22,
+        #h24 {
+            background-color: rgba(255, 69, 0, 0.5)
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        #box11:hover {
+            background-color: rgb(0, 170, 0);
+            font-size: 16pt;
+        }
+
+        #box12:hover {
+            background: rgb(233, 173, 8);
+            font-size: 16pt;
+
+        }
+        #box21:hover{
+            background-color: blue;
+            font-size: 16pt;
+
+        }
+        #box22:hover{
+            background-color: orangered;
+            font-size: 16pt;
+        }
+    </style>
+</head>
+
+<body>
+    <H1>SWOT分析</H1>
+    <table>
+        <tr>
+            <td id="box11" class="box">
+                <div>
+                    <h2 id="h21">💪 Strengths（優勢）</h2><br>
+                    具備設計實務經驗：你熟悉 Photoshop、Illustrator 等設計工具，能有效支援介面開發與視覺呈現。<br>
+                    學習目標明確：目前專注於學習 PHP 與 HTML，並以報修單系統作為結訓作品，方向清晰具體。<br>
+                    跨平台操作能力：熟悉 Windows 與 macOS 系統，能靈活適應不同開發環境與工具。<br>
+                    重視實用與效率：偏好直接、實務導向的學習與回饋，展現務實且高效的思維模式。
+                </div>
+            </td>
+            <td id="box12" class="box">
+                <div>
+                    <h2 id="h22">😕 Weaknesses（劣勢）</h2><br>
+                    仍在初學階段：PHP、HTML、XAMPP 還在起步，可能尚未熟練掌握框架或進階應用。<br>
+                    介面設計經驗尚淺：從 HTML 表格排版的問題來看，可能還需要多練習 CSS 佈局與前端美化技巧。<br>
+                    習慣性懷疑呈現效果：像是你問「為什麼 td 間距不一樣」這類問題，代表對瀏覽器渲染還不熟悉，這會影響 Debug 速度。
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td id="box21" class="box">
+                <div>
+                    <h2 id="h23">🚀 Opportunities（機會）</h2><br>
+                    結訓作品作為實績：報修系統若設計得好，可用於履歷或實務展示。<br>
+                    可以整合 NAS 作為後端資源：你熟 NAS 和網路，未來可將作品與 NAS 結合，強化資料儲存、備份、自架服務等技能。<br>
+                    Web 全端開發起點：你已接觸前端、後端、版本控制，具備發展全端工程師的潛力。<br>
+                    可利用開源與社群資源：像 GitHub、Stack Overflow、PT 社群都是你能發問與學習的地方。
+                </div>
+            </td>
+            <td id="box22" class="box">
+                <div>
+                    <h2 id="h24">⚠️ Threats（威脅）</h2><br>
+                    技術更新快速：PHP 雖然實用，但在新創圈或大型專案中不一定是首選，需留意技術趨勢變化。<br>
+                    容易卡在技術細節：像 HTML 排版或環境設定若花太多時間 debug，會延遲整體進度。<br>
+                    學習動能需維持：學程結束後若無實際應用場景，可能導致學習熱度下降。
+                </div>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

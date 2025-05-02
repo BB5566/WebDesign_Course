@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>114年泰山職訓局-20號招募網</title>
+
+    <!-- 樣式設定 -->
+    <style>
+        /* 此為指定table的樣式 */
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: auto;
+        }
+
+        /* 此為指定儲存格樣式tr、th、td */
+        tr,
+        th,
+        td {
+            /* 設定邊框樣式，常見的有 實線(solid) 、 虛線(dashed)  */
+            border: 5px solid rgb(46, 103, 122);
+            padding: 8px;
+            text-align: center;
+        }
+
+        body {
+            background: lightblue;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="" method="">
+        <table>
+            <tr>
+                <th colspan="6" style="background-color: #2e677a; color: white;">
+                    <h1>114年泰山職訓局-20號招募網</h1>
+                    <p>招募期間：2025/04/23~2025/09/25</p>
+                </th>
+            </tr>
+            <tr>
+                <th colspan="6" style="height: 400px;">
+                    <img src="https://media.nownews.com/nn_media/thumbnail/2022/10/1666150315684-7cf650b2a4ce489da4ff835a9c6fe6f3-800x436.jpg?unShow=false"
+                        alt="泰山職訓局招募LOGO" style="width: 100%; height: 100%; object-fit: cover;">
+                </th>
+            </tr>
+            <tr>
+                <th colspan="6" style="text-align: center;object-fit: cover">
+                        <video loop autoplay muted style="height: 200px ;">
+                            <source
+                                src="./video/Teletubbies Intro and Theme Song Videos For Kids (online-video-cutter.com).mp4"
+                                style="width: 100%; height: 100%; object-fit: cover;">
+                        </video>
+                </th>
+            </tr>
+            <tr>
+                <th><label for="name">姓名</label></th>
+                <th><input type="text" name="name" id="name" style="width: 100%;" required></th>
+                <th><label for="email">電子信箱</label></th>
+                <th><input type="email" name="email" id="email" style="width: 100%;" required></th>
+
+                <th rowspan="5"><label for="gender">性別</label></th>
+                <td rowspan="5">
+                    <select name="gender" id="gender" style="width: 100%;" required>
+                        <option value="" disabled selected>請選擇性別</option>
+                        <option value="male">男</option>
+                        <option value="female">女</option>
+                        <option value="nottale">不願提供</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th><label for="birthday">出生年月日</label></th>
+                <th><input type="date" id="birthday" name="birthday" style="width: 100%;" required></th>
+                <th>應徵職缺：</th>
+                <th>
+                    <input type="radio" name="position" id="position_a" value="engineer" required>
+                    <label for="position_a">工程師</label>
+                    <input type="radio" name="position" id="position_b" value="designer">
+                    <label for="position_b">設計師</label>
+                    <input type="radio" name="position" id="position_c" value="c_position">
+                    <label for="position_c">C職缺</label>
+                    <input type="radio" name="position" id="position_d" value="d_position">
+                    <label for="position_d">D職缺</label>
+                </th>
+            </tr>
+            <tr>
+                <th>OFFICE技能熟悉程度：</th>
+                <th>
+                    <input type="radio" name="officeskill" id="office_0" value="0" required>
+                    <label for="office_0">0</label>
+                    <input type="radio" name="officeskill" id="office_1" value="1">
+                    <label for="office_1">1</label>
+                    <input type="radio" name="officeskill" id="office_2" value="2">
+                    <label for="office_2">2</label>
+                    <input type="radio" name="officeskill" id="office_3" value="3">
+                    <label for="office_3">3</label>
+                    <input type="radio" name="officeskill" id="office_4" value="4">
+                    <label for="office_4">4</label>
+                    <input type="radio" name="officeskill" id="office_5" value="5">
+                    <label for="office_5">5</label>
+                </th>
+                <th>ADOBE技能熟悉程度：</th>
+                <th>
+                    <input type="radio" name="adobeskillrate" id="adobe_0" value="0" required>
+                    <label for="adobe_0">0</label>
+                    <input type="radio" name="adobeskillrate" id="adobe_1" value="1">
+                    <label for="adobe_1">1</label>
+                    <input type="radio" name="adobeskillrate" id="adobe_2" value="2">
+                    <label for="adobe_2">2</label>
+                    <input type="radio" name="adobeskillrate" id="adobe_3" value="3">
+                    <label for="adobe_3">3</label>
+                    <input type="radio" name="adobeskillrate" id="adobe_4" value="4">
+                    <label for="adobe_4">4</label>
+                    <input type="radio" name="adobeskillrate" id="adobe_5" value="5">
+                    <label for="adobe_5">5</label>
+                </th>
+            </tr>
+            <tr>
+                <th>XXX技能熟悉程度：</th>
+                <th>
+                    <input type="radio" name="xxxskillrate" id="xxxskill_0" value="0" required>
+                    <label for="xxxskill_0">0</label>
+                    <input type="radio" name="xxxskillrate" id="xxxskill_1" value="1">
+                    <label for="xxxskill_1">1</label>
+                    <input type="radio" name="xxxskillrate" id="xxxskill_2" value="2">
+                    <label for="xxxskill_2">2</label>
+                    <input type="radio" name="xxxskillrate" id="xxxskill_3" value="3">
+                    <label for="xxxskill_3">3</label>
+                    <input type="radio" name="xxxskillrate" id="xxxskill_4" value="4">
+                    <label for="xxxskill_4">4</label>
+                    <input type="radio" name="xxxskillrate" id="xxxskill_5" value="5">
+                    <label for="xxxskill_5">5</label>
+                </th>
+                <th>OOO技能熟悉程度：</th>
+                <th>
+                    <input type="radio" name="oooskillrate" id="oooskill_0" value="0" required>
+                    <label for="oooskill_0">0</label>
+                    <input type="radio" name="oooskillrate" id="oooskill_1" value="1">
+                    <label for="oooskill_1">1</label>
+                    <input type="radio" name="oooskillrate" id="oooskill_2" value="2">
+                    <label for="oooskill_2">2</label>
+                    <input type="radio" name="oooskillrate" id="oooskill_3" value="3">
+                    <label for="oooskill_3">3</label>
+                    <input type="radio" name="oooskillrate" id="oooskill_4" value="4">
+                    <label for="oooskill_4">4</label>
+                    <input type="radio" name="oooskillrate" id="oooskill_5" value="5">
+                    <label for="oooskill_5">5</label>
+                </th>
+            </tr>
+            <tr>
+                <th><label for="wantmoney">期望薪資</label></th>
+                <th colspan="5">
+                    <select name="wantmoney" id="wantmoney" style="width: 100%;" required>
+                        <option value="" disabled selected>請選擇期望薪資</option>
+                        <option value="wm35">3~5萬</option>
+                        <option value="wm58">5~8萬</option>
+                        <option value="wm810">8~10萬</option>
+                    </select>
+                </th>
+            </tr>
+            <tr>
+                <td colspan="6">
+                    <textarea name="otherinfo" id="otherinfo" placeholder="想跟我們說的話..." rows="5"
+                        style="width: 100%;"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3" style="text-align: center;">
+                    <label for="id">身分證</label>
+                    <input type="file" id="id" name="id">
+                </td>
+                <td colspan="3" style="text-align: center;">
+                    <label for="healthcard">健保卡</label>
+                    <input type="file" id="healthcard" name="healthcard">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="6" style="text-align: center;">
+                    <button type="submit">送出表單</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>
