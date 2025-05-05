@@ -1,0 +1,39 @@
+body
+{
+    padding: 1%;
+    
+}
+
+img{height: 200px;}
+
+.head {
+    color: green;
+    font-size: 50pt;
+    text-align: center;
+}
+
+.head:hover {
+    color: rgb(36, 0, 167);
+    font-size: 60pt;
+}
+
+
+.title {
+    color: lightblue;
+    font-size: 18pt;
+}
+
+.title:hover {
+    color: rgb(0, 255, 21);
+    font-size: 24pt;
+}
+
+li {
+    color: red;
+    font-size: 12pt;
+}
+
+li:hover {
+    color: rgb(51, 24, 24);
+    font-size: 18pt;
+}
