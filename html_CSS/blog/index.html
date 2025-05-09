@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>XXX BLOG 測試</title>
+    <style>
+      * {
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .head {
+        width: 100%;
+        height: 50px;
+        background: #000;
+        color: #fff;
+        text-align: center;
+        line-height: 50px;
+        position: sticky;
+        top: 0;
+        font-size: 24px;
+        letter-spacing: 2px;
+        z-index: 10;
+      }
+      .container {
+        width: 80%;
+        min-height: 100px;
+        background: #a52a2a;
+        margin: 30px auto;
+        text-align: center;
+        border: #fff 5px solid;
+        border-radius: 10px;
+        padding: 20px 0;
+      }
+      /* 三欄區塊 */
+      .c1 {
+        background: #479966;
+        color: #fff;
+        display: flex;
+        justify-content: space-around;
+        gap: 20px;
+      }
+      .blog-item {
+        flex: 1;
+        background: #fff;
+        color: #000;
+        margin: 0 10px;
+        border-radius: 8px;
+        padding: 20px 15px;
+        min-height: 320px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        transition: box-shadow 0.2s, transform 0.2s;
+      }
+      .blog-item h3 {
+        margin-bottom: 8px;
+        font-size: 22px;
+        color: #cc1f1f;
+      }
+      .blog-item h4 {
+        margin-bottom: 4px;
+        font-size: 16px;
+        color: #479966;
+      }
+      .blog-item h5 {
+        margin-bottom: 12px;
+        font-size: 14px;
+        color: #888;
+      }
+      .blog-item p {
+        font-size: 15px;
+        line-height: 1.7;
+        color: #222;
+      }
+      .blog-item a {
+        text-decoration: none;
+        color: inherit;
+        transition: color 0.2s;
+      }
+      .blog-item a:hover h3 {
+        color: #479966;
+        text-decoration: underline;
+      }
+      /* 其他單欄 */
+      .c2,
+      .c3 {
+        background: #fff;
+        color: #000;
+        padding: 0;
+      }
+      .c2 .blog-item,
+      .c3 .blog-item {
+        margin: 0 auto;
+        background: #f7f7f7;
+      }
+      /* 回到頂端按鈕 */
+      .bttop {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: #000;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 30px;
+        cursor: pointer;
+        opacity: 0.7;
+        z-index: 1000;
+        text-decoration: none;
+        font-size: 16px;
+        transition: opacity 0.2s, background 0.2s;
+      }
+      .bttop:hover {
+        opacity: 1;
+        background: #222;
+      }
+      /* 響應式設計：手機直排 */
+      @media (max-width: 900px) {
+        .container {
+          width: 98%;
+        }
+        .c1 {
+          flex-direction: column;
+        }
+        .blog-item {
+          margin: 10px auto;
+          width: 96%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="head" id="top">XXX BLOG 測試</div>
+
+    <!-- 回到頂端按鈕 -->
+    <a href="#" class="bttop">回到頂端</a>
+
+    <!-- 三欄區塊 -->
+    <div class="container c1 slider">
+      <div class="blog-item slide">
+        <a href="#blog-a"><h3>標題A</h3></a>
+        <h4>作者A</h4>
+        <h5>時間 2023/10/23</h5>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
+          alias perferendis quisquam autem, natus dolorum, libero eius eum quos
+          mollitia nobis suscipit et ipsa aliquid excepturi illum beatae laborum
+          consequuntur.
+        </p>
+      </div>
+      <div class="blog-item slide">
+        <a href="#blog-b"><h3>標題B</h3></a>
+        <h4>作者B</h4>
+        <h5>時間 2023/10/23</h5>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
+          alias perferendis quisquam autem, natus dolorum, libero eius eum quos
+          mollitia nobis suscipit et ipsa aliquid excepturi illum beatae laborum
+          consequuntur.
+        </p>
+      </div>
+      <div class="blog-item s">
+        <a href="#blog-c"><h3>標題C</h3></a>
+        <h4>作者C</h4>
+        <h5>時間 2023/10/23</h5>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
+          alias perferendis quisquam autem, natus dolorum, libero eius eum quos
+          mollitia nobis suscipit et ipsa aliquid excepturi illum beatae laborum
+          consequuntur.
+        </p>
+      </div>
+    </div>
+
+    <!-- 單欄內容區塊 -->
+    <div class="container c2" id="blog-a">
+      <div class="blog-item">
+        <h3>標題A</h3>
+        <h4>作者A</h4>
+        <h5>時間 2023/10/23</h5>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
+          alias perferendis quisquam autem, natus dolorum, libero eius eum quos
+          mollitia nobis suscipit et ipsa aliquid excepturi illum beatae laborum
+          consequuntur.
+        </p>
+      </div>
+    </div>
+    <div class="container c3" id="blog-b">
+      <div class="blog-item">
+        <h3>標題B</h3>
+        <h4>作者B</h4>
+        <h5>時間 2023/10/23</h5>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
+          alias perferendis quisquam autem, natus dolorum, libero eius eum quos
+          mollitia nobis suscipit et ipsa aliquid excepturi illum beatae laborum
+          consequuntur.
+        </p>
+      </div>
+    </div>
+    <div class="container c3" id="blog-c">
+      <div class="blog-item">
+        <h3>標題C</h3>
+        <h4>作者C</h4>
+        <h5>時間 2023/10/23</h5>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
+          alias perferendis quisquam autem, natus dolorum, libero eius eum quos
+          mollitia nobis suscipit et ipsa aliquid excepturi illum beatae laborum
+          consequuntur.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
