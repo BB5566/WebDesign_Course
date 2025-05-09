@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 300px;
+            height: 300px;
+            background-color: lightblue;
+            margin: auto;
+            text-align: center;
+            padding: 10px;
+
+        }
+
+        table,
+        tr,
+        td {
+            /* border: 1px solid black; */
+            height: 500px;
+            /* vertical-align: bottom; */
+        }
+
+        table {
+            width: 80%;
+            border-collapse: collapse;
+            margin: auto;
+        }
+
+        /* vertical-align 高度 只能用在table */
+        .table2-td {
+            background-color: lightpink;
+            height: 500px;
+            vertical-align: middle;
+            text-align: center;
+        }
+
+        .box1 {
+            vertical-align: top;
+        }
+
+        .box2 {
+            vertical-align: middle;
+        }
+
+        .box3 {
+            vertical-align: bottom;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>table 1</h3>
+    <table>
+        <tr>
+            <td class="box1">
+                <div class="box ">
+                    本業
+                </div>
+            </td>
+            <td class="box2">
+                <div class="box ">
+                    投資
+                </div>
+            </td>
+            <td class="box3">
+                <div class="box ">
+                    房地產
+                </div>
+            </td>
+        </tr>
+    </table>
+
+    <h3>table2</h3>
+    <table id="table2">
+        <tr>
+            <td class="table2-td box">
+                本業
+            </td>
+            <td class="table2-td box">
+                投資
+            </td>
+            <td class="table2-td box">
+                房地產
+            </td>
+        </tr>
+    </table>
+
+</body>
+
+</html>

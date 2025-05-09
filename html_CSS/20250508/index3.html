@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .content {
+        width: 90vw; /* 用 viewport 寬度，不容易超出 */
+        border: 1px solid black;
+        height: auto;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap; /* 允許自動換行 */
+        gap: 20px; /* 元素間距 */
+        padding: 20px;
+        box-sizing: border-box;
+      }
+
+      .box,
+      .box1 {
+        height: 300px;
+        width: 300px;
+        background-color: green;
+        margin: auto;
+      }
+      .box-fixed {
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+        position: fixed; /* 固定在視窗上 */
+        right: 50px; /* 距離上方 0px */
+        bottom: 50px;
+        background-color: rgb(152, 255, 152);
+        opacity: 0.5;
+      }
+      .text {
+        text-align: center;
+        font-size: 30px;
+        color: rgb(245, 11, 11);
+        font-weight: bold;
+        line-height: 200px; /* 讓文字垂直置中 */
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <div class="box"></div>
+      <div class="box1"></div>
+      <div class="box"></div>
+      <div class="box1"></div>
+      <div class="box"></div>
+      <div class="box1"></div>
+      <div class="box"></div>
+      <div class="box1"></div>
+      <div class="box"></div>
+      <div class="box1"></div>
+      <div class="box"></div>
+      <div class="box1"></div>
+      <div class="box"></div>
+      <div class="box1"></div>
+      <div class="box"></div>
+      <div class="box1"></div>
+    </div>
+    <div class="box-fixed"><div class="text">聯繫我</div></div>
+  </body>
+</html>

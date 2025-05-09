@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>程式基礎</title>
-     <style>
+    <style>
         /* ul{
             list-style-type:none;
             display:flex;
@@ -22,8 +23,9 @@
             box-shadow:1px 1px 5px #eee;
             margin:1%;
         } */
-     </style>
+    </style>
 </head>
+
 <body>
     <ul>
         <li><a href="var.php">變數</a></li>
@@ -34,4 +36,5 @@
         <li><a href="./array/index.php">字串</a></li>
     </ul>
 </body>
+
 </html>

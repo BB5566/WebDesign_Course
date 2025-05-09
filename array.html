@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>原地反轉陣列</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; }
+    input, button { padding: 5px; margin: 5px 0; }
+    .output { margin-top: 10px; font-weight: bold; }
+  </style>
+</head>
+<body>
+
+<h2>原地反轉陣列</h2>
+<p>請輸入一組以逗號分隔的數字（例如：2,4,6,1,8）</p>
+
+<input type="text" id="inputArray" value="2,4,6,1,8">
+<br>
+<button onclick="reverseArray()">反轉</button>
+
+<div class="output" id="output"></div>
+
+<script>
+function reverseArray() {
+  let input = document.getElementById("inputArray").value;
+  let arr = input.split(",").map(Number); // 把字串轉成數字陣列
+
+  let steps = [`初始陣列： [${arr.join(", ")}]`];
+
+  // 原地反轉邏輯
+  for (let i = 0; i < Math.floor(arr.length / 2); i++) {
+    let j = arr.length - 1 - i;
+    // 記錄每一步交換
+    steps.push(`交換位置 ${i} 和 ${j}：${arr[i]} ↔ ${arr[j]}`);
+    let temp = arr[i];
+    arr[i] = arr[j];
+    arr[j] = temp;
+    steps.push(`結果： [${arr.join(", ")}]`);
+  }
+
+  document.getElementById("output").innerHTML = steps.join("<br>");
+}
+</script>
+
+</body>
+</html>
