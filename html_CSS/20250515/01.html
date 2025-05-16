@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid 6 Balls Per Row</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      .header {
+        width: 100%;
+        height: 500px;
+        background: #000000; /* 參考圖片背景色 */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Noto Sans TC", "Microsoft JhengHei", "黑體", sans-serif;
+        font-size: 8rem; /* 放大字體更接近圖像感覺 */
+        font-weight: bold;
+        letter-spacing: 0.15em;
+        color: transparent; /* 讓外框與陰影成主角 */
+        -webkit-text-stroke: 8px #ff0033; /* 主外框 */
+        text-stroke: 8px #ff0033; /* 非標準屬性，部分瀏覽器支援 */
+        position: relative;
+        text-align: center;
+        /* 疊加多層陰影模擬錯位與重疊 */
+        text-shadow: 0 0 0 #ff0033, 12px 8px 0 rgba(255, 0, 51, 0.4),
+          -12px -8px 0 rgba(0, 0, 0, 0.4), 24px 16px 0 rgba(255, 0, 51, 0.2),
+          -24px -16px 0 rgba(0, 0, 0, 0.2), 0 0 0 #fff,
+          8px 12px 0 rgba(255, 255, 255, 0.5);
+      }
+
+      .main {
+        display: flex;
+
+        width: 100%;
+        height: 800px;
+        background-color: blueviolet;
+      }
+
+      .content {
+        width: 80%;
+        height: 700px;
+        background-color: yellow;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        /* align-items: center; */
+      }
+
+      .leftC {
+        font-size: 36pt;
+        width: 20%;
+        height: 700px;
+        background-color: bisque;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-left: 50px;
+        padding-top: 50px;
+      }
+      ul {
+        padding-left: 100px;
+      }
+
+      .container {
+        width: 100;
+        margin: auto;
+        display: flex;
+        background-color: aqua;
+        padding: 10px;
+      }
+
+      .ball {
+        width: calc(100% / 4);
+        /* 一列 6 顆 */
+        aspect-ratio: 1;
+        /* 保持正圓 */
+        border-radius: 50%;
+        display: flex;
+        /* 文字水平+垂直置中 */
+        justify-content: center;
+        align-items: center;
+        font-size: 1.2rem;
+        margin: 10px;
+      }
+      .ball:hover {
+        scale: 1.1;
+        box-shadow: 0px 0px 5px rgba();
+      }
+
+      .ball-1 {
+        background-image: url("https://static.wixstatic.com/media/449abe_0e5d916784184d3784f6e5828ef6d351~mv2.jpg/v1/fill/w_864,h_864,al_c,q_85,enc_avif,quality_auto/Character-Laa-Laa.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      .ball-2 {
+        background-image: url("https://static.wixstatic.com/media/449abe_17110c5d4f42471188253d6937e36515~mv2.jpg/v1/fill/w_824,h_824,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Character-Dipsy.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      .ball-3 {
+        background-image: url("https://static.wixstatic.com/media/449abe_e6401ccbb3d9460c8241e85160ed0483~mv2.jpg/v1/fill/w_864,h_864,al_c,q_85,enc_avif,quality_auto/Character-Po.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      .ball-4 {
+        background-image: url("https://static.wixstatic.com/media/449abe_2627833711864b2e89892787a6e490ee~mv2.jpg/v1/fill/w_824,h_824,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Character-Tinky-Winky.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      .footer {
+        background-color: black;
+        width: 100%;
+        height: 100px;
+        color: white;
+      }
+
+      .content-box {
+        background-color: burlywood;
+        width: 80%;
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 3px 3px 5px rgb(104, 104, 104);
+
+        /* 主軸置中(x軸) */
+        justify-content: space-around;
+        margin-bottom: 10px;
+        margin-left: 50px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="header">header一二三測試</div>
+    <div class="container">
+      <div class="ball ball-1"></div>
+      <div class="ball ball-2"></div>
+      <div class="ball ball-3"></div>
+      <div class="ball ball-4"></div>
+    </div>
+
+    <div class="main">
+      <div class="leftC">
+        leftC
+        <ul>
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
+          <li>4</li>
+          <li>5</li>
+        </ul>
+      </div>
+      <div class="content">
+        content
+        <div class="content-box">content-box</div>
+        <div class="content-box">content-box</div>
+        <div class="content-box">content-box</div>
+        <div class="content-box">content-box</div>
+        <div class="content-box">content-box</div>
+      </div>
+    </div>
+    <div class="footer">footer</div>
+  </body>
+</html>

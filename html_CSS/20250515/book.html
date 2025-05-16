@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookshelf RWD</title>
+    <style>
+      body {
+        margin: 0;
+        background: black;
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+      }
+
+      .bookshelf {
+        width: 90vw;
+        aspect-ratio: 3 / 10;
+        background-image: url("https://i.redd.it/gkqz8z0x2jce1.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: top center;
+        position: relative;
+      }
+
+      .row {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        width: 100%;
+        gap: 5vw;
+      }
+
+      /* 每一層書的垂直位置（依照背景層板微調） */
+      .row1 {
+        top: 6.8%;
+      }
+      .row2 {
+        top: 13.8%;
+      }
+      .row3 {
+        top: 21.3%;
+      }
+      /* 若有更多層，可繼續加 row4、row5... 並調整 top 百分比 */
+
+      .books {
+        width: 10%;
+        aspect-ratio: 2 / 3;
+        /* background-color: #ffcc00; */
+        color: black;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        border: 3px solid #685f5f;
+        border-radius: 4px;
+        box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.8);
+        background-size: cover;
+        flex-direction: column;
+        justify-content: flex-end; /* 內容貼底 */
+        position: relative;
+      }
+
+      .books:hover {
+        transform: scale(1.1);
+        z-index: 1;
+      }
+
+      .book1 {
+        background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsfxrcUtlaLqSTTpA7N9cWKIopvRNtXngM2A&s");
+      }
+
+      .book2 {
+        background-image: url("https://blog-cdn.reedsy.com/directories/gallery/248/large_65b0ae90317f7596d6f95bfdd6131398.jpg");
+      }
+      .book3 {
+        background-image: url("https://images.squarespace-cdn.com/content/v1/5fc7868e04dc9f2855c99940/32f738d4-e4b9-4c61-bfc0-e813699cdd3c/laura-barrett-illustrator-beloved-girls-book-cover.jpg");
+      }
+      .book4 {
+        background-image: url("https://images.squarespace-cdn.com/content/v1/56cde58af699bb2bd4ea993a/1632079082799-HU1AZ9F53O2YIM62OVDA/Jack+Smyth.jpg");
+      }
+      .book-tag {
+        font-size: 1vw;
+        background-color: rgba(255, 136, 0, 0.8);
+        color: rgb(255, 255, 255);
+        display: flex;
+        width: 100%;
+        height: 20%;
+        justify-content: center;
+        align-items: center;
+      }
+      .bookTitle {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80%;
+        text-align: center;
+        font-size: 30pt;
+        padding-top: 20px; /* 視覺微調 */
+        z-index: 2;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bookshelf">
+      <div class="bookTitle">書櫃標題</div>
+      <div class="row row1">
+        <a
+          href="https://www.goodreads.com/book/show/34517906-a-million-to-one"
+          class="books book1"
+        >
+          <div class="book-tag">新書</div>
+        </a>
+
+        <div class="books book2"><div class="book-tag">新書</div></div>
+        <div class="books book3"><div class="book-tag">新書</div></div>
+        <div class="books book4"><div class="book-tag">新書</div></div>
+      </div>
+      <div class="row row2">
+        <div class="books">5</div>
+        <div class="books">6</div>
+        <div class="books">7</div>
+        <div class="books">8</div>
+      </div>
+      <div class="row row3">
+        <div class="books">9</div>
+        <div class="books">10</div>
+        <div class="books">11</div>
+        <div class="books">12</div>
+      </div>
+    </div>
+  </body>
+</html>

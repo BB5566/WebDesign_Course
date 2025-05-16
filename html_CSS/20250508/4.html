@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      .header {
+        text-align: center;
+        font-size: 50px;
+        color: rgb(245, 11, 11);
+        background-color: black;
+        font-weight: bold;
+        margin-top: 20px;
+        padding-left: 200px;
+        position: fixed;
+        top: 0;}
+      .btm1 {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100px;
+        background-color: rgb(255, 167, 152);
+        opacity: 1;
+      }
+      .btm2 {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100px;
+        height: 100%;
+        margin: auto;
+        line-height: 100px;
+        background-color: rgb(109, 26, 12);
+        opacity: 1;
+      }
+
+      .text {
+        text-align: center;
+        font-size: 50px;
+        color: rgb(245, 11, 11);
+        font-weight: bold;
+        line-height: 100px; /* 讓文字垂直置中 */
+        opacity: 1;
+      }
+
+      .container {
+        background-color: blue;
+        width: 90vw; /* 用 viewport 寬度，不容易超出 */
+        border: 1px solid black;
+        height: 1500px;
+        margin: auto;
+      }
+      .container1 {
+        background-color: aquamarine;
+        position: relative;
+        font-size: 50px;
+        top: 50px;
+        border: 1px solid black;
+        height: auto;
+        margin: auto;
+        padding: 50px;
+      }
+      .container2 {
+        /* background-color: rgb(228, 27, 255); */
+        position: relative;
+        font-size: 50px;
+        top: 200px;
+        left: 100px;
+        border: 1px solid black;
+        height: auto;
+        margin: auto;
+        padding: 50px;
+      }
+      .fixed-box1 {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100px;
+        height: 100px;
+
+        background-color: rgb(255, 167, 152);
+        opacity: 0.5;
+      }
+      .fixed-box2 {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100px;
+        height: 100px;
+        background-color: rgb(91, 184, 54);
+        opacity: 0.5;
+      }
+      .fixed-box3 {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100px;
+        height: 100px;
+        background-color: rgb(21, 61, 240);
+        opacity: 0.5;
+      }
+      .fixed-box4 {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        width: 100px;
+        height: 100px;
+        background-color: rgb(245, 19, 196);
+        opacity: 0.5;
+      }
+      h1 {
+        position: fixed;
+        top: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="header">Lorem ipsum dolor sit amet.</h1>
+    <div class="container">
+      <div class="container1">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut architecto
+        alias hic autem beatae, numquam, quo quisquam optio in minus obcaecati
+        corrupti totam deserunt fuga nam facere ullam dolore distinctio
+        dignissimos amet ab et enim quos. Dicta praesentium, error officiis
+        nesciunt fuga quis repudiandae provident! Incidunt maxime veritatis
+        fugit. Tenetur exercitationem fuga quis tempore illo voluptatum corporis
+        voluptatibus. Esse, voluptas. Cumque voluptatem consequuntur, rerum ab
+        eligendi sapiente expedita culpa id assumenda eius accusantium? Aut
+        soluta laudantium odit nesciunt accusantium architecto non sapiente
+        dolores. Modi aut dolorum molestiae facilis officia possimus explicabo
+        cupiditate, velit perspiciatis, magnam ratione aperiam, quis dicta
+        debitis.
+      </div>
+      <div class="container2">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut architecto
+        alias hic autem beatae, numquam, quo quisquam optio in minus obcaecati
+        corrupti totam deserunt fuga nam facere ullam dolore distinctio
+        dignissimos amet ab et enim quos. Dicta praesentium, error officiis
+        nesciunt fuga quis repudiandae provident! Incidunt maxime veritatis
+        fugit. Tenetur exercitationem fuga quis tempore illo voluptatum corporis
+        voluptatibus. Esse, voluptas. Cumque voluptatem consequuntur, rerum ab
+        eligendi sapiente expedita culpa id assumenda eius accusantium? Aut
+        soluta laudantium odit nesciunt accusantium architecto non sapiente
+        dolores. Modi aut dolorum molestiae facilis officia possimus explicabo
+        cupiditate, velit perspiciatis, magnam ratione aperiam, quis dicta
+        debitis.
+      </div>
+      <div class="btm1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
+        voluptatem quam laboriosam, sint a odio! Tenetur natus dignissimos
+        temporibus expedita iste at esse adipisci impedit enim, sit eius ab
+        reiciendis.
+      </div>
+      <div class="btm2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
+        voluptatem quam laboriosam, sint a odio! Tenetur natus dignissimos
+        temporibus expedita iste at esse adipisci impedit enim, sit eius ab
+        reiciendis.
+      </div>
+    </div>
+    <div class="fixed-box1"><div class="text">X</div></div>
+    <div class="fixed-box2"><div class="text">X</div></div>
+    <div class="fixed-box3"><div class="text">X</div></div>
+    <div class="fixed-box4"><div class="text">X</div></div>
+  </body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0px;
+            width: 800px;
+            gap: 10px; 
+        }
+
+        body {
+            background: rgba(250, 198, 102, 0.5);
+        }
+
+        body {
+            background-image: url(https://png.pngtree.com/background/20210714/original/pngtree-antique-kraft-paper-background-picture-image_1232394.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 80%;
+        }
+
+
+        .box1 {
+            width: 240px;
+            height: 300px;
+            background-size: 700px;
+            background-image: url(one.png);
+            background-position-x: 0px;
+            background-position-y: 0px;
+            background-repeat: no-repeat;
+            filter: grayscale(100%);
+
+        }
+
+        .box2 {
+            width: 240px;
+            height: 300px;
+            background-size: 700px;
+            background-image: url(one.png);
+            background-position-x: 0px;
+            background-position-y: -304px;
+            background-repeat: no-repeat;
+            filter: grayscale(100%);
+
+        }
+
+        .box3 {
+            width: 240px;
+            height: 300px;
+            background-size: 700px;
+            background-image: url(one.png);
+            background-position-x: -239px;
+            background-position-y: 0;
+            background-repeat: no-repeat;
+            filter: grayscale(100%);
+
+        }
+
+        .box4 {
+            width: 240px;
+            height: 300px;
+            background-size: 700px;
+            background-image: url(one.png);
+            background-position-x: -238px;
+            background-position-y: -304px;
+            background-repeat: no-repeat;
+            filter: grayscale(100%);
+
+
+        }
+
+        .box5 {
+            width: 240px;
+            height: 300px;
+            background-size: 700px;
+            background-image: url(one.png);
+            background-position-x: -476px;
+            background-position-y: 3px;
+            background-repeat: no-repeat;
+            filter: grayscale(100%);
+
+
+        }
+
+        .box6 {
+            width: 240px;
+            height: 300px;
+            background-size: 700px;
+            background-image: url(one.png);
+            background-position-x: -476px;
+            background-position-y: -304px;
+            background-repeat: no-repeat;
+            filter: grayscale(100%);
+
+        }
+
+        .box1:hover{
+            width: 240px;
+            height: 300px;
+            background-size: 70px;
+            background-image: url(https://www.icegif.com/wp-content/uploads/2024/04/luffy-gear-5-icegif-11.gif);
+            background-position-x: 0px;
+            background-position-y: 0px;
+            background-repeat: no-repeat;
+            background-size: cover; 
+            filter: grayscale(0%);
+            border-radius: 15px
+        }
+
+        .box2:hover,
+        .box3:hover,
+        .box4:hover,
+        .box5:hover,
+        .box6:hover {
+            filter: grayscale(0%) brightness(1.1) contrast(150%) saturate(150%);
+            cursor: pointer;
+        }
+
+        .card {
+            width: 240px;
+            text-align: center;
+            position: relative;
+        }
+
+        .text {
+            margin-top: 8px;
+            font-size: 16px;
+            color: #333;
+            opacity: 0;
+        }
+
+        .card:hover .text {
+            opacity: 1;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="box box1"></div>
+            <div class="text">Monkey D. Luffy<br>懸賞金30億貝里
+            </div>
+        </div>
+        <div class="card">
+            <div class="box box2"></div>
+            <div class="text">Jinbe<br>懸賞金11億貝里</div>
+        </div>
+        <div class="card">
+            <div class="box box3"></div>
+            <div class="text">這是 box3 的說明</div>
+        </div>
+        <div class="card">
+            <div class="box box4"></div>
+            <div class="text">這是 box4 的說明</div>
+        </div>
+        <div class="card">
+            <div class="box box5"></div>
+            <div class="text">這是 box5 的說明</div>
+        </div>
+        <div class="card">
+            <div class="box box6"></div>
+            <div class="text">這是 box6 的說明</div>
+        </div>
+    </div>
+
+</body>
+
+</html>

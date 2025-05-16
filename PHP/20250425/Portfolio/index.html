@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>我的設計作品集</title>
+  <style>
+    body { font-family: 'Noto Sans TC', Arial, sans-serif; margin:0; background:#f8f8f8; }
+    header { background:#222; color:#fff; padding:2rem 0; text-align:center; }
+    nav { margin:1rem 0; }
+    nav a { color:#fff; margin:0 1rem; text-decoration:none; font-weight:bold; }
+    .container { max-width:1000px; margin:2rem auto; padding:0 1rem; }
+    h2 { border-left:4px solid #222; padding-left:0.5rem; color:#222; }
+    .portfolio-section { display:flex; flex-wrap:wrap; gap:2rem; margin-top:1rem; }
+    .portfolio-card {
+      background:#fff; border-radius:8px; box-shadow:0 2px 8px #0001;
+      flex:1 1 300px; max-width:320px; padding:1rem;
+      display:flex; flex-direction:column; align-items:center;
+      transition:transform 0.2s;
+    }
+    .portfolio-card:hover { transform:translateY(-6px) scale(1.03); }
+    .portfolio-card img { width:100%; border-radius:4px; margin-bottom:1rem; }
+    .portfolio-type { font-size:0.9rem; color:#888; margin-bottom:0.5rem; }
+    .about, .contact { background:#fff; border-radius:8px; padding:2rem; margin-bottom:2rem; }
+    @media (max-width:700px) {
+      .portfolio-section { flex-direction:column; gap:1rem; }
+      .portfolio-card { max-width:100%; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>我的設計作品集</h1>
+    <nav>
+      <a href="#about">關於我</a>
+      <a href="#portfolio">作品集</a>
+      <a href="#contact">聯絡我</a>
+    </nav>
+  </header>
+  <div class="container">
+    <section id="about" class="about">
+      <h2>關於我</h2>
+      <p>你好，我是 XXX，專長於平面設計與網頁設計。熱愛創造視覺美感與良好用戶體驗，歡迎瀏覽我的作品！</p>
+    </section>
+
+    <section id="portfolio">
+      <h2>作品集</h2>
+      <div class="portfolio-section">
+        <!-- 平面設計作品 -->
+        <div class="portfolio-card">
+          <div class="portfolio-type">平面設計</div>
+          <img src="graphic1.jpg" alt="平面設計作品1">
+          <h3>品牌LOGO設計</h3>
+          <p>為新創品牌設計的現代感LOGO。</p>
+        </div>
+        <div class="portfolio-card">
+          <div class="portfolio-type">平面設計</div>
+          <img src="graphic2.jpg" alt="平面設計作品2">
+          <h3>海報設計</h3>
+          <p>活動宣傳海報，強調視覺衝擊力。</p>
+        </div>
+        <!-- 網頁設計作品 -->
+        <div class="portfolio-card">
+          <div class="portfolio-type">網頁設計</div>
+          <img src="web1.jpg" alt="網頁設計作品1">
+          <h3>企業形象官網</h3>
+          <p>響應式設計，提升品牌專業形象。</p>
+        </div>
+        <div class="portfolio-card">
+          <div class="portfolio-type">網頁設計</div>
+          <img src="web2.jpg" alt="網頁設計作品2">
+          <h3>個人部落格設計</h3>
+          <p>簡潔易讀，強調內容呈現。</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>聯絡我</h2>
+      <form>
+        <label>姓名：<input type="text" name="name" required></label><br><br>
+        <label>Email：<input type="email" name="email" required></label><br><br>
+        <label>訊息：<br>
+          <textarea name="message" rows="4" required></textarea>
+        </label><br><br>
+        <button type="submit">送出</button>
+      </form>
+    </section>
+  </div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Box Centering</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    .container {
+      width: 100%;
+      background: #3ad33a;
+      text-align: center; 
+      /* 讓 .box 水平置中排列 */
+    }
+    .box {
+      width: 150px;
+      background: #bd5353;
+      margin: 10px;
+      display: inline-block; 
+      /* float: left; */
+      /* 並排 + 能被 text-align 控制 */
+      text-align: left;      
+      /* 內容內文字對齊方式可自由設定 */
+      vertical-align: middle;
+      /* 讓 .box 垂直置中排列 */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box">
+      1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro velit
+      iure autem harum iusto. Sapiente expedita optio repudiandae soluta hic.
+    </div>
+    <div class="box">
+      2 ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis
+      neque hic nisi voluptatibus quae at veniam assumenda iure est cum
+      delectus ut veritatis, qui ullam sequi, architecto, debitis quidem
+      incidunt.
+    </div>
+    <div class="box">
+      3 ipsum dolor sit, amet consectetur adipisicing elit. Dolorum
+      dignissimos eaque laborum veniam ipsam laboriosam illo tempora harum.
+      Alias enim suscipit fuga eaque harum porro autem nesciunt dignissimos
+      aspernatur voluptatem ipsam ratione, eveniet id qui praesentium illo
+      corporis assumenda doloremque. Optio dolores, facere alias nobis quas
+      repudiandae obcaecati eveniet libero.
+    </div>
+        <div class="box">
+      4 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum
+      dignissimos eaque laborum veniam ipsam laboriosam illo tempora harum.
+      Alias enim suscipit fuga eaque harum porro autem nesciunt dignissimos
+      aspernatur
+    </div>
+        <div class="box">
+      5 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum
+      dignissimos eaque
+    </div>
+  </div>
+</body>
+</html>

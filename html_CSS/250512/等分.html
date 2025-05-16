@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      .container-1 {
+        /* background-color: #3ad33a; */
+        text-align: center;
+        font-size: 60pt;
+        /* border: black 3px solid; */
+        margin-bottom: 50px;
+        gap: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        height: 300px;
+      }
+      .container-2 {
+        /* background-color: #fa3c0d; */
+        text-align: center;
+        font-size: 60pt;
+        /* border: black 3px solid; */
+        margin-bottom: 50px;
+        gap: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        height: 300px;
+      }
+      .container-3 {
+        /* background-color: #380dfa; */
+        text-align: center;
+        font-size: 60pt;
+        /* border: black 3px solid; */
+        margin-bottom: 50px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: space-between;
+        height: 300px;
+      }
+      .container-4 {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: space-between;
+        height: 300px;
+      }
+      .box1 {
+        text-align: center;
+        font-size: 60pt;
+        border: black 3px solid;
+        background-color: #3ad33a;
+        flex: 1 1 100%;
+        background-image: url(https://pngimg.com/d/buttons_PNG44.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .box21,
+      .box22 {
+        text-align: center;
+        font-size: 60pt;
+        border: black 3px solid;
+        flex: 1 1 400px;
+        min-width: 300px;
+        background: #eb7272;
+        background-image: url(https://pngimg.com/d/buttons_PNG44.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .box31,
+      .box32,
+      .box33 {
+        text-align: center;
+        font-size: 60pt;
+        border: black 3px solid;
+        flex: 1;
+        min-width: 0;
+        background-image: url(https://pngimg.com/d/buttons_PNG44.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .box41,
+      .box42,
+      .box43,
+      .box44 {
+        text-align: center;
+        font-size: 60pt;
+        border: black 3px solid;
+        flex: 1;
+        min-width: 0;
+        background-image: url(https://pngimg.com/d/buttons_PNG44.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .box1:hover {
+        text-align: center;
+        font-size: 60pt;
+        border: black 3px solid;
+        background-color: #3ad33a;
+        flex: 1 1 100%;
+        background-image: url(https://pngimg.com/d/buttons_PNG44.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        scale: 1.5;
+      }
+      .box21:hover,
+      .box22:hover {
+        text-align: center;
+        font-size: 60pt;
+        border: black 3px solid;
+        flex: 1 1 400px;
+        min-width: 300px;
+        background: #eb7272;
+        background-image: url(https://pngimg.com/d/buttons_PNG44.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        scale: 1.5;
+      }
+      .box31,
+      .box32,
+      .box33 {
+        text-align: center;
+        font-size: 60pt;
+        border: black 3px solid;
+        flex: 1;
+        min-width: 0;
+        background-image: url(https://pngimg.com/d/buttons_PNG44.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .box41,
+      .box42,
+      .box43,
+      .box44 {
+        text-align: center;
+        font-size: 60pt;
+        border: black 3px solid;
+        flex: 1;
+        min-width: 0;
+        background-image: url(https://pngimg.com/d/buttons_PNG44.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      @media (max-width: 768px) {
+        .box31,
+        .box32,
+        .box33,
+        .box41,
+        .box42,
+        .box43,
+        .box44 {
+          flex: 1 1 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-1">
+      <div class="box1">box1</div>
+    </div>
+
+    <div class="container-2">
+      <div class="box21">21</div>
+      <div class="box22">22</div>
+    </div>
+
+    <div class="container-3">
+      <div class="box31">31</div>
+      <div class="box32">32</div>
+      <div class="box33">33</div>
+    </div>
+
+    <div class="container-4">
+      <div class="box41">41</div>
+      <div class="box42">42</div>
+      <div class="box43">43</div>
+      <div class="box44">44</div>
+    </div>
+  </body>
+</html>

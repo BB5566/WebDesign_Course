@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+    <style>
+      /* 設定網頁整體字型與背景 */
+      body {
+        font-family: 'Segoe UI', Arial, sans-serif;
+        background-color: #f5f7fa;
+        margin: 0;
+        padding: 0;
+      }
+
+      /* 頁面標題樣式 */
+      h1 {
+        text-align: center;
+        color: #2a4d69;
+        margin-top: 30px;
+      }
+
+      /* Todo List 外層 ul 樣式 */
+      ul.todolist {
+        list-style: none; /* 移除預設項目符號 */
+        padding: 0;
+        max-width: 400px;
+        margin: 30px auto 0 auto; /* 置中 */
+      }
+
+      /* 每個待辦項目的 li 樣式 */
+      li.todoitem {
+        background-color: #dce5e9;
+        padding: 15px 10px;
+        margin-bottom: 15px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        transition: box-shadow 0.3s;
+      }
+
+      /* 滑鼠移到待辦項目時加陰影 */
+      li.todoitem:hover {
+        box-shadow: 0 2px 8px rgba(42, 77, 105, 0.15);
+      }
+
+      /* 勾選框樣式 */
+      input[type="checkbox"] {
+        width: 20px;
+        height: 20px;
+        margin-right: 12px;
+        accent-color: #2a4d69; /* 現代瀏覽器可自訂顏色 */
+        cursor: pointer;
+      }
+
+      /* 文字輸入框樣式 */
+      .todo-text {
+        border: none;
+        background: transparent;
+        font-size: 18px;
+        flex: 1; /* 讓輸入框自動填滿剩餘空間 */
+        color: #3c6b8f;
+        outline: none;
+        margin-right: 10px;
+      }
+
+      /* 只讀時游標變成預設 */
+      .todo-text[readonly] {
+        cursor: default;
+      }
+
+      /* "已完成" 標籤樣式 */
+      .done-label {
+        color: #4b86b4;
+        font-size: 16px;
+        transition: color 0.3s;
+        cursor: pointer;
+      }
+
+      /* 勾選時，整個項目加上刪除線與變灰色 */
+      input[type="checkbox"]:checked ~ .todo-text,
+      input[type="checkbox"]:checked ~ .done-label {
+        text-decoration: line-through;
+        color: #888;
+      }
+
+      /* 響應式設計：手機上調整排版 */
+      @media (max-width: 600px) {
+        ul.todolist {
+          max-width: 95vw;
+        }
+        li.todoitem {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        .todo-text {
+          width: 100%;
+          margin-bottom: 8px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 頁面標題 -->
+    <h1>Todo List</h1>
+    <!-- 待辦清單，使用 ul 包裹 -->
+    <ul class="todolist">
+      <!-- 第一個待辦項目 -->
+      <li class="todoitem">
+        <!-- 勾選框，id 用於 label 連結 -->
+        <input type="checkbox" id="finish1" />
+        <!-- 只讀的輸入框，顯示待辦事項內容 -->
+        <input type="text" class="todo-text" value="學習 HTML"/>
+        <!-- 已完成的標籤，點擊可勾選 checkbox -->
+        <label for="finish1" class="done-label">已完成</label>
+      </li>
+      <!-- 第二個待辦項目 -->
+      <li class="todoitem">
+        <input type="checkbox" id="finish2" />
+        <input type="text" class="todo-text" value="練習 CSS" readonly />
+        <label for="finish2" class="done-label">已完成</label>
+      </li>
+      <!-- 你可以繼續新增更多項目 -->
+    </ul>
+  </body>
+</html>
