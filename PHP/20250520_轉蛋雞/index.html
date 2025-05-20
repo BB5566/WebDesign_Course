@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>日式六邊形福引箱抽獎</title>
+  <style>
+    body {
+      background: #f7f2ea;
+      font-family: 'Noto Sans TC', Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+    h1 {
+      margin-bottom: 20px;
+      color: #b47b33;
+      letter-spacing: 2px;
+    }
+    .lottery-box {
+      position: relative;
+      width: 240px;
+      height: 280px;
+      margin-bottom: 30px;
+      user-select: none;
+    }
+    .shaking {
+      animation: shakeBox 0.6s cubic-bezier(.36,.07,.19,.97) 1;
+    }
+    @keyframes shakeBox {
+      10%, 90% { transform: rotate(-6deg);}
+      20%, 80% { transform: rotate(8deg);}
+      30%, 50%, 70% { transform: rotate(-12deg);}
+      40%, 60% { transform: rotate(12deg);}
+      100% { transform: rotate(0);}
+    }
+    .ball {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+      z-index: 10;
+      display: none;
+      font-size: 15px;
+      color: #fff;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      border: 2.5px solid #fff;
+      text-shadow: 1px 1px 2px #555;
+    }
+    .draw-btn {
+      background: #b47b33;
+      color: #fff;
+      font-size: 22px;
+      padding: 12px 36px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 3px 10px rgba(180,123,51,0.15);
+      letter-spacing: 2px;
+      transition: background 0.2s;
+    }
+    .draw-btn:disabled {
+      background: #ccc;
+      cursor: not-allowed;
+    }
+    /* 彈窗 */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0; top: 0; width: 100vw; height: 100vh;
+      background: rgba(0,0,0,0.4);
+      justify-content: center;
+      align-items: center;
+    }
+    .modal-content {
+      background: #fff;
+      border-radius: 12px;
+      padding: 36px 32px 24px 32px;
+      text-align: center;
+      box-shadow: 0 0 20px #e2b96977;
+      animation: pop 0.4s;
+    }
+    @keyframes pop {
+      from { transform: scale(0.6); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+    .modal-content h2 {
+      margin: 0 0 16px 0;
+      font-size: 26px;
+      color: #b47b33;
+    }
+    .modal-content .ball {
+      display: inline-flex;
+      position: static;
+      margin: 0 0 10px 0;
+      font-size: 18px;
+      width: 46px; height: 46px;
+      border-width: 3px;
+    }
+    .modal-content button {
+      margin-top: 18px;
+      font-size: 18px;
+      background: #b47b33;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      padding: 8px 26px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .modal-content button:hover {
+      background: #a16a23;
+    }
+  </style>
+</head>
+<body>
+  <h1>日式六邊形福引箱抽獎</h1>
+  <div class="lottery-box" id="box">
+    <!-- SVG六邊形木箱 -->
+    <svg width="240" height="260" style="position:absolute;top:0;left:0;">
+      <polygon points="120,20 220,75 220,185 120,240 20,185 20,75"
+        fill="#e2b969" stroke="#b47b33" stroke-width="8"/>
+      <!-- 出珠口 -->
+      <ellipse cx="120" cy="220" rx="20" ry="10" fill="#fff" stroke="#b47b33" stroke-width="3"/>
+      <ellipse cx="120" cy="220" rx="8" ry="4" fill="#b47b33"/>
+    </svg>
+    <div class="ball" id="ball"></div>
+  </div>
+  <button class="draw-btn" id="drawBtn">搖一搖</button>
+
+  <!-- 結果彈窗 -->
+  <div class="modal" id="resultModal">
+    <div class="modal-content">
+      <h2>🎉 恭喜中獎！</h2>
+      <div class="ball" id="modalBall"></div>
+      <div id="prizeText" style="margin-top:10px;font-size:20px;color:#b47b33;"></div>
+      <button onclick="closeModal()">確定</button>
+    </div>
+  </div>
+
+  <script>
+    // 獎品與顏色
+    const prizes = [
+      { name: "特獎 iPhone 15", color: "#e74c3c", text: "紅球" },
+      { name: "二獎 Switch", color: "#3498db", text: "藍球" },
+      { name: "三獎 禮券$1000", color: "#27ae60", text: "綠球" },
+      { name: "四獎 造型玩偶", color: "#f1c40f", text: "黃球" },
+      { name: "五獎 電影票", color: "#9b59b6", text: "紫球" },
+      { name: "參加獎", color: "#bdc3c7", text: "白球" }
+    ];
+
+    const box = document.getElementById('box');
+    const ball = document.getElementById('ball');
+    const drawBtn = document.getElementById('drawBtn');
+    const resultModal = document.getElementById('resultModal');
+    const modalBall = document.getElementById('modalBall');
+    const prizeText = document.getElementById('prizeText');
+
+    function closeModal() {
+      resultModal.style.display = 'none';
+    }
+
+    function showResult(prize) {
+      modalBall.style.background = prize.color;
+      modalBall.textContent = prize.text;
+      prizeText.textContent = prize.name;
+      resultModal.style.display = 'flex';
+    }
+
+    function animateBall(prize) {
+      ball.style.background = prize.color;
+      ball.textContent = prize.text;
+      ball.style.display = 'flex';
+      ball.style.top = '110px'; // 初始在箱子中間
+      ball.style.opacity = '1';
+
+      // 掉落動畫
+      setTimeout(() => {
+        ball.style.transition = 'top 0.8s cubic-bezier(.5,1.8,.5,1)';
+        ball.style.top = '205px'; // 出珠口
+      }, 100);
+
+      // 彈跳+淡出
+      setTimeout(() => {
+        ball.style.transition = 'top 0.3s, opacity 0.4s';
+        ball.style.top = '250px';
+        ball.style.opacity = '0';
+      }, 1100);
+
+      // 結果彈窗
+      setTimeout(() => {
+        ball.style.display = 'none';
+        showResult(prize);
+        drawBtn.disabled = false;
+      }, 1600);
+    }
+
+    drawBtn.onclick = function() {
+      if (drawBtn.disabled) return;
+      drawBtn.disabled = true;
+      // 木箱晃動
+      box.classList.add('shaking');
+      setTimeout(() => {
+        box.classList.remove('shaking');
+      }, 600);
+
+      // 隨機抽獎
+      const prize = prizes[Math.floor(Math.random() * prizes.length)];
+      animateBall(prize);
+    };
+
+    // 關閉彈窗點擊背景也可關閉
+    resultModal.onclick = function(e) {
+      if (e.target === resultModal) closeModal();
+    };
+  </script>
+</body>
+</html>
