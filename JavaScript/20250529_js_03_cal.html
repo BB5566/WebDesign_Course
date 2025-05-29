@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculator</title>
+</head>
+<body>
+  <!-- 使用者輸入的第一個數字 -->
+  <p><input type="number" id="inputNum1" /></p>
+
+  <!-- 選擇運算符號 -->
+  <p>
+    <select id="operator">
+      <option value="+">＋</option>
+      <option value="-">－</option>
+      <option value="*">×</option>
+      <option value="/">÷</option>
+    </select>
+  </p>
+
+  <!-- 使用者輸入的第二個數字 -->
+  <p><input type="number" id="inputNum2" /></p>
+
+  <!-- 按鈕，點擊後計算 -->
+  <p><button type="button" id="btnCalculate">計算</button></p>
+
+  <!-- 顯示結果 -->
+  <p id="outputResult"></p>
+
+  <script>
+    const inputNum1 = document.getElementById("inputNum1");
+    const inputNum2 = document.getElementById("inputNum2");
+    const operator = document.getElementById("operator");
+    const btnCalculate = document.getElementById("btnCalculate");
+    const outputResult = document.getElementById("outputResult");
+
+    btnCalculate.addEventListener("click", function () {
+      const num1 = Number(inputNum1.value);
+      const num2 = Number(inputNum2.value);
+      const op = operator.value;
+
+      if (isNaN(num1) || isNaN(num2)) {
+        outputResult.textContent = "請輸入兩個有效的數字";
+        return;
+      }
+
+      let result;
+
+      switch (op) {
+        case "+":
+          result = num1 + num2;
+          break;
+        case "-":
+          result = num1 - num2;
+          break;
+        case "*":
+          result = num1 * num2;
+          break;
+        case "/":
+          if (num2 === 0) {
+            outputResult.textContent = "除數不能為 0";
+            return;
+          }
+          result = num1 / num2;
+          break;
+        default:
+          outputResult.textContent = "無效的運算符號";
+          return;
+      }
+
+      outputResult.textContent = "結果是：" + result;
+    });
+  </script>
+</body>
+</html>

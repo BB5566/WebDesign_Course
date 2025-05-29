@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sum Calculator</title>
+  </head>
+  <body>
+    <!-- 使用者輸入的第一個數字 -->
+    <p><input type="number" id="inputNum1" /></p>
+<p>+</p>
+
+    <!-- 使用者輸入的第二個數字 -->
+    <p><input type="number" id="inputNum2" /></p>
+    <!-- 按鈕，點擊後計算總和 -->
+    <p><button type="button" id="btnCalculate">計算總和</button></p>
+
+    <!-- 顯示計算結果的區塊 -->
+    <p id="outputSum"></p>
+
+    <script>
+      // 取得第一個輸入框的 DOM 元素
+      const inputNum1 = document.getElementById("inputNum1");
+
+      // 取得第二個輸入框的 DOM 元素
+      const inputNum2 = document.getElementById("inputNum2");
+
+      // 取得按鈕的 DOM 元素
+      const btnCalculate = document.getElementById("btnCalculate");
+
+      // 取得顯示結果的段落元素
+      const outputSum = document.getElementById("outputSum");
+
+      // 為按鈕加上點擊事件監聽器
+      btnCalculate.addEventListener("click", function () {
+        // 把輸入框的值轉成整數後相加
+        const num1 = Number(inputNum1.value);
+        const num2 = Number(inputNum2.value);
+
+        // 確保使用者有輸入數字（防止 NaN）
+        if (isNaN(num1) || isNaN(num2)) {
+          outputSum.textContent = "請輸入兩個有效的數字";
+          return; // 提早結束這次事件處理
+        }
+
+        // 計算總和
+        const sum = num1 + num2;
+        const sum = num1 - num2;
+        const sum = num1  num2;
+
+
+
+        // 將結果顯示在畫面上
+        outputSum.textContent = "總和是：" + sum;
+      });
+    </script>
+  </body>
+</html>
