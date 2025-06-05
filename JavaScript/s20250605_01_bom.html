@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button type="button" id="myBtn">myBtn</button>
+
+    <script>
+
+        console.log('window', window);
+        console.log('window typeof', typeof (window));
+        console.log('document', window.document);
+        console.log('document typeof', typeof (document));
+        console.log('window.console', window.console);
+
+        // 1.bind
+        let myBtn = document.getElementById('myBtn');
+
+        // 2.action
+        myBtn.addEventListener('click', function () {
+            console.log('myBtn', myBtn);
+            // alert('myBtn click ok');
+            // window.alert('myBtn click ok');
+
+        });
+
+    </script>
+</body>
+
+</html>
